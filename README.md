@@ -38,3 +38,15 @@ id           | company_id | country_id | industry_group_id | year | product_name
 | 8362-1-2016  | 11         | 16         | 7                 | 2016 | Land Cruiser Prado. FJ Cruiser. Dyna trucks. Toyoace.IMV def unit. | 2272.33   | 191687               | 2.90                                             | 0.25                                             | 96.85                                            | 
 
 
+What are the industry groups of these products?
+
+```sql
+select * 
+from industry_groups
+where id = 7 or id = 13
+```
+
+| id | industry_group                     | 
+| -: | ---------------------------------: | 
+| 7  | Automobiles & Components           | 
+| 13 | Electrical Equipment and Machinery | 
