@@ -50,3 +50,22 @@ where id = 7 or id = 13
 | -: | ---------------------------------: | 
 | 7  | Automobiles & Components           | 
 | 13 | Electrical Equipment and Machinery | 
+
+What are the industries with the highest contribution to carbon emissions?
+
+```sql
+select industry_groups.industry_group, (select SUM(carbon_footprint_pcf) from product_emissions)
+from industry_groups
+join product_emissions
+on industry_groups.id = product_emissions.industry_group_id
+group by industry_groups.industry_group
+limit 5
+```
+
+| industry_group                                                         | (select SUM(carbon_footprint_pcf) from product_emissions) | 
+| ---------------------------------------------------------------------: | --------------------------------------------------------: | 
+| "Consumer Durables, Household and Personal Products"                   | 13948951                                                  | 
+| "Food, Beverage & Tobacco"                                             | 13948951                                                  | 
+| "Forest and Paper Products - Forestry, Timber, Pulp and Paper, Rubber" | 13948951                                                  | 
+| "Mining - Iron, Aluminum, Other Metals"                                | 13948951                                                  | 
+| "Pharmaceuticals, Biotechnology & Life Sciences"                       | 13948951                                                  | 
