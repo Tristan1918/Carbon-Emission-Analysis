@@ -92,4 +92,18 @@ limit 5
 What are the countries with the highest contribution to carbon emissions?
 
 ```sql
+select countries.country_name, (select SUM(carbon_footprint_pcf) from product_emissions)
+from countries
+join product_emissions
+on countries.id = product_emissions.country_id
+group by countries.country_name
+limit 5
 ```
+
+| country_name | (select SUM(carbon_footprint_pcf) from product_emissions) | 
+| -----------: | --------------------------------------------------------: | 
+| Australia    | 13948951                                                  | 
+| Belgium      | 13948951                                                  | 
+| Brazil       | 13948951                                                  | 
+| Canada       | 13948951                                                  | 
+| Chile        | 13948951                                                  | 
