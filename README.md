@@ -107,3 +107,19 @@ limit 5
 | Brazil       | 13948951                                                  | 
 | Canada       | 13948951                                                  | 
 | Chile        | 13948951                                                  | 
+
+What is the trend of carbon footprints (PCFs) over the years?
+ ```sql
+select year, sum(carbon_footprint_pcf)
+from product_emissions
+group by year
+```
+
+| year | sum(carbon_footprint_pcf) | 
+| ---: | ------------------------: | 
+| 2013 | 503857                    | 
+| 2014 | 624226                    | 
+| 2015 | 10840415                  | 
+| 2016 | 1640182                   | 
+| 2017 | 340271                    | 
+
