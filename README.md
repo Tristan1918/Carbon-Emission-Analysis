@@ -1,7 +1,9 @@
 # Carbon-Emission-Analysis
 
 What is the project about?
-[!image](https://cdn.prod.website-files.com/63d2626cedcc41357cddabdf/664b69922ce036842dd8a5d0_chris-leboutillier-TUJud0AWAPI-unsplash-p-800.webp)
+
+![image](https://cdn.prod.website-files.com/63d2626cedcc41357cddabdf/664b69922ce036842dd8a5d0_chris-leboutillier-TUJud0AWAPI-unsplash-p-800.webp)
+
 Photo by Chris LeBoutillier (unsplash.com)
 
 This report aims to analyze carbon emissions to examine the carbon footprint across various industries. We aim to identify sectors with the highest levels of emissions by analyzing them across countries and years, as well as to uncover trends.
