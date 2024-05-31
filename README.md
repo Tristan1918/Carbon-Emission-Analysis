@@ -69,3 +69,27 @@ limit 5
 | "Forest and Paper Products - Forestry, Timber, Pulp and Paper, Rubber" | 13948951                                                  | 
 | "Mining - Iron, Aluminum, Other Metals"                                | 13948951                                                  | 
 | "Pharmaceuticals, Biotechnology & Life Sciences"                       | 13948951                                                  | 
+
+What are the companies with the highest contribution to carbon emissions?
+
+```sql
+select companies.company_name, (select SUM(carbon_footprint_pcf) from product_emissions)
+from companies
+join product_emissions
+on companies.id = product_emissions.company_id
+group by companies.company_name
+limit 5
+```
+
+| company_name                  | (select SUM(carbon_footprint_pcf) from product_emissions) | 
+| ----------------------------: | --------------------------------------------------------: | 
+| "Autodesk, Inc."              | 13948951                                                  | 
+| "Casio Computer Co., Ltd."    | 13948951                                                  | 
+| "Cisco Systems, Inc."         | 13948951                                                  | 
+| "CNX Coal Resources, LP"      | 13948951                                                  | 
+| "Coca-Cola Enterprises, Inc." | 13948951                                                  | 
+
+What are the countries with the highest contribution to carbon emissions?
+
+```sql
+```
