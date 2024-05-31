@@ -123,3 +123,13 @@ group by year
 | 2016 | 1640182                   | 
 | 2017 | 340271                    | 
 
+Which industry groups has demonstrated the most notable decrease in carbon footprints (PCFs) over time?
+
+```sql
+select product_emissions.year, industry_groups.industry_group, sum(carbon_footprint_pcf)
+from product_emissions
+join industry_groups
+on product_emissions.industry_group_id = industry_groups.id
+group by industry_groups.industry_group
+order by product_emissions.year
+```
