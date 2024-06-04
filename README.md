@@ -77,21 +77,22 @@ limit 5
 What are the companies with the highest contribution to carbon emissions?
 
 ```sql
-select companies.company_name, (select SUM(carbon_footprint_pcf) from product_emissions)
+select companies.company_name, SUM(carbon_footprint_pcf) 
 from companies
 join product_emissions
 on companies.id = product_emissions.company_id
 group by companies.company_name
+order by SUM(carbon_footprint_pcf) desc
 limit 5
 ```
 
-| company_name                  | (select SUM(carbon_footprint_pcf) from product_emissions) | 
-| ----------------------------: | --------------------------------------------------------: | 
-| "Autodesk, Inc."              | 13948951                                                  | 
-| "Casio Computer Co., Ltd."    | 13948951                                                  | 
-| "Cisco Systems, Inc."         | 13948951                                                  | 
-| "CNX Coal Resources, LP"      | 13948951                                                  | 
-| "Coca-Cola Enterprises, Inc." | 13948951                                                  | 
+| company_name                            | SUM(carbon_footprint_pcf) | 
+| --------------------------------------: | ------------------------: | 
+| Gamesa Corporación Tecnológica, S.A.  | 9778464                   | 
+| Daimler AG                              | 1594300                   | 
+| Volkswagen AG                           | 655960                    | 
+| Mitsubishi Gas Chemical Company, Inc. | 212016                    | 
+| Hino Motors, Ltd.                     | 191687                    | 
 
 What are the countries with the highest contribution to carbon emissions?
 
