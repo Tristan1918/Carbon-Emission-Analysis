@@ -18,6 +18,9 @@ Our dataset is compiled from publicly available data from nature.com and encompa
 
 Data Structure
 
+![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/930e2bf0-99fc-4233-9241-056bcf6af8a4)
+
+
 The dataset consists of 4 tables containing information regarding carbon emissions generated during the production of goods.
 
 Which products contribute the most to carbon emissions?
@@ -133,3 +136,5 @@ on product_emissions.industry_group_id = industry_groups.id
 group by industry_groups.industry_group
 order by product_emissions.year
 ```
+
+
