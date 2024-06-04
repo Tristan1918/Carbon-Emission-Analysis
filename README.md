@@ -57,21 +57,22 @@ where id = 7 or id = 13
 What are the industries with the highest contribution to carbon emissions?
 
 ```sql
-select industry_groups.industry_group, (select SUM(carbon_footprint_pcf) from product_emissions)
+select industry_groups.industry_group, SUM(carbon_footprint_pcf) 
 from industry_groups
 join product_emissions
 on industry_groups.id = product_emissions.industry_group_id
 group by industry_groups.industry_group
+order by SUM(carbon_footprint_pcf) desc
 limit 5
 ```
 
-| industry_group                                                         | (select SUM(carbon_footprint_pcf) from product_emissions) | 
-| ---------------------------------------------------------------------: | --------------------------------------------------------: | 
-| "Consumer Durables, Household and Personal Products"                   | 13948951                                                  | 
-| "Food, Beverage & Tobacco"                                             | 13948951                                                  | 
-| "Forest and Paper Products - Forestry, Timber, Pulp and Paper, Rubber" | 13948951                                                  | 
-| "Mining - Iron, Aluminum, Other Metals"                                | 13948951                                                  | 
-| "Pharmaceuticals, Biotechnology & Life Sciences"                       | 13948951                                                  | 
+| industry_group                     | SUM(carbon_footprint_pcf) | 
+| ---------------------------------: | ------------------------: | 
+| Electrical Equipment and Machinery | 9801558                   | 
+| Automobiles & Components           | 2582264                   | 
+| Materials                          | 577595                    | 
+| Technology Hardware & Equipment    | 363776                    | 
+| Capital Goods                      | 258712                    | 
 
 What are the companies with the highest contribution to carbon emissions?
 
