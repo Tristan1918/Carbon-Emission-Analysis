@@ -40,6 +40,7 @@ id           | company_id | country_id | industry_group_id | year | product_name
 | 22917-2-2015 | 10         | 23         | 13                | 2015 | Wind Turbine G90 2 Megawats                                        | 361000    | 1251625              | N/a (product with insufficient stage-level data) | N/a (product with insufficient stage-level data) | N/a (product with insufficient stage-level data) | 
 | 8362-1-2016  | 11         | 16         | 7                 | 2016 | Land Cruiser Prado. FJ Cruiser. Dyna trucks. Toyoace.IMV def unit. | 2272.33   | 191687               | 2.90                                             | 0.25                                             | 96.85                                            | 
 
+![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/548776b7-cb30-4867-a6e5-e3f510481f1b)
 
 What are the industry groups of these products?
 
