@@ -140,4 +140,12 @@ group by industry_groups.industry_group
 order by product_emissions.year
 ```
 
+Insights:
 
+The product that emits the most carbon is the wind turbine
+
+The industry groups that emit the most carbon are those related to heavy industry (Electrical Equipment and Machinery, Automobiles & Components)
+
+The company that emits the most carbon is a company in the energy field (Gamesa Corporación Tecnológica, S.A.)
+
+The amount of carbon emitted gradually increased over the years until its peak in 2015, then it tended to decrease sharply.
