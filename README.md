@@ -97,21 +97,22 @@ limit 5
 What are the countries with the highest contribution to carbon emissions?
 
 ```sql
-select countries.country_name, (select SUM(carbon_footprint_pcf) from product_emissions)
+select countries.country_name, SUM(carbon_footprint_pcf)
 from countries
 join product_emissions
 on countries.id = product_emissions.country_id
 group by countries.country_name
+order by SUM(carbon_footprint_pcf) desc
 limit 5
 ```
 
-| country_name | (select SUM(carbon_footprint_pcf) from product_emissions) | 
-| -----------: | --------------------------------------------------------: | 
-| Australia    | 13948951                                                  | 
-| Belgium      | 13948951                                                  | 
-| Brazil       | 13948951                                                  | 
-| Canada       | 13948951                                                  | 
-| Chile        | 13948951                                                  | 
+| country_name | SUM(carbon_footprint_pcf) | 
+| -----------: | ------------------------: | 
+| Spain        | 9786130                   | 
+| Germany      | 2251225                   | 
+| Japan        | 653237                    | 
+| USA          | 518381                    | 
+| South Korea  | 186965                    | 
 
 What is the trend of carbon footprints (PCFs) over the years?
  ```sql
