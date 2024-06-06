@@ -74,6 +74,8 @@ limit 5
 | Technology Hardware & Equipment    | 363776                    | 
 | Capital Goods                      | 258712                    | 
 
+![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/f66a2976-aa3f-4f9c-a814-2a1b9af5a8bb)
+
 What are the companies with the highest contribution to carbon emissions?
 
 ```sql
@@ -93,6 +95,8 @@ limit 5
 | Volkswagen AG                           | 655960                    | 
 | Mitsubishi Gas Chemical Company, Inc. | 212016                    | 
 | Hino Motors, Ltd.                     | 191687                    | 
+
+![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/eaf04163-9a21-431e-9450-39fe489741e9)
 
 What are the countries with the highest contribution to carbon emissions?
 
