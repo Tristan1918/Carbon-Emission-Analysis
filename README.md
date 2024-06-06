@@ -136,6 +136,8 @@ group by year
 | 2016 | 1640182                   | 
 | 2017 | 340271                    | 
 
+![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/99afc7df-9826-498f-8706-9b1674040630)
+
 Which industry groups has demonstrated the most notable decrease in carbon footprints (PCFs) over time?
 
 ```sql
