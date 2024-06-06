@@ -159,6 +159,6 @@ The company that emits the most carbon is a company in the energy field (Gamesa 
 
 The amount of carbon emitted gradually increased over the years until its peak in 2015, then it tended to decrease sharply.
 
-Conclision:
+Conclusion:
 
 To reduce carbon emissions, we need to pay attention to how we use energy, rather than paying attention to the things that emit carbon around our daily lives.
