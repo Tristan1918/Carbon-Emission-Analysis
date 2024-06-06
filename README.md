@@ -119,6 +119,8 @@ limit 5
 | USA          | 518381                    | 
 | South Korea  | 186965                    | 
 
+![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/1e4c43e9-1986-443d-b209-b9ba8abb5689)
+
 What is the trend of carbon footprints (PCFs) over the years?
  ```sql
 select year, sum(carbon_footprint_pcf)
