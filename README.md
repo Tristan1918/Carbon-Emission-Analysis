@@ -1,6 +1,8 @@
-# Carbon-Emission-Analysis
+# Carbon Emission Analysis
 
-What is the project about?
+## 1. Introduction
+
+### What is the project about?
 
 ![image](https://cdn.prod.website-files.com/63d2626cedcc41357cddabdf/664b69922ce036842dd8a5d0_chris-leboutillier-TUJud0AWAPI-unsplash-p-800.webp)
 
@@ -12,18 +14,19 @@ Carbon emissions play a crucial role in the environment, accounting for over 75%
 
 Through this analysis, we hope to gain an understanding of the environmental impact of different industries and contribute to making informed decisions in sustainable development.
 
-Data Source: Where Our Data Comes From
+### Data Source: Where Our Data Comes From
 
 Our dataset is compiled from publicly available data from nature.com and encompasses the product carbon footprints (PCF) for various companies. PCFs represent the greenhouse gas emissions associated with specific products, quantified in CO2 (carbon dioxide equivalent).
 
-Data Structure
+### Data Structure
 
 ![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/930e2bf0-99fc-4233-9241-056bcf6af8a4)
 
-
 The dataset consists of 4 tables containing information regarding carbon emissions generated during the production of goods.
 
-Which products contribute the most to carbon emissions?
+## 2. Questions to research
+
+### Which products contribute the most to carbon emissions?
 
 ```sql
 select * 
@@ -42,7 +45,7 @@ id           | company_id | country_id | industry_group_id | year | product_name
 
 ![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/548776b7-cb30-4867-a6e5-e3f510481f1b)
 
-What are the industry groups of these products?
+### What are the industry groups of these products?
 
 ```sql
 select * 
@@ -55,7 +58,7 @@ where id = 7 or id = 13
 | 7  | Automobiles & Components           | 
 | 13 | Electrical Equipment and Machinery | 
 
-What are the industries with the highest contribution to carbon emissions?
+### What are the industries with the highest contribution to carbon emissions?
 
 ```sql
 select industry_groups.industry_group, SUM(carbon_footprint_pcf) 
@@ -77,7 +80,7 @@ limit 5
 
 ![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/f66a2976-aa3f-4f9c-a814-2a1b9af5a8bb)
 
-What are the companies with the highest contribution to carbon emissions?
+### What are the companies with the highest contribution to carbon emissions?
 
 ```sql
 select companies.company_name, SUM(carbon_footprint_pcf) 
@@ -99,7 +102,7 @@ limit 5
 
 ![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/eaf04163-9a21-431e-9450-39fe489741e9)
 
-What are the countries with the highest contribution to carbon emissions?
+### What are the countries with the highest contribution to carbon emissions?
 
 ```sql
 select countries.country_name, SUM(carbon_footprint_pcf)
@@ -121,7 +124,7 @@ limit 5
 
 ![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/1e4c43e9-1986-443d-b209-b9ba8abb5689)
 
-What is the trend of carbon footprints (PCFs) over the years?
+### What is the trend of carbon footprints (PCFs) over the years?
  ```sql
 select year, sum(carbon_footprint_pcf)
 from product_emissions
@@ -138,7 +141,7 @@ group by year
 
 ![image](https://github.com/Tristan1918/Carbon-Emission-Analysis/assets/170103101/99afc7df-9826-498f-8706-9b1674040630)
 
-Which industry groups has demonstrated the most notable decrease in carbon footprints (PCFs) over time?
+### Which industry groups has demonstrated the most notable decrease in carbon footprints (PCFs) over time?
 
 ```sql
 select product_emissions.year, industry_groups.industry_group, sum(carbon_footprint_pcf)
@@ -149,7 +152,7 @@ group by industry_groups.industry_group
 order by product_emissions.year
 ```
 
-Insights:
+## 3. Insights:
 
 The product that emits the most carbon is the wind turbine
 
@@ -159,6 +162,6 @@ The company that emits the most carbon is a company in the energy field (Gamesa 
 
 The amount of carbon emitted gradually increased over the years until its peak in 2015, then it tended to decrease sharply.
 
-Conclusion:
+## 4. Conclusion:
 
 To reduce carbon emissions, we need to pay attention to how we use energy, rather than paying attention to the things that emit carbon around our daily lives.
