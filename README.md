@@ -152,7 +152,7 @@ group by industry_groups.industry_group
 order by product_emissions.year
 ```
 
-## 3. Insights:
+## 3. Insights
 
 The product that emits the most carbon is the wind turbine
 
@@ -162,6 +162,6 @@ The company that emits the most carbon is a company in the energy field (Gamesa 
 
 The amount of carbon emitted gradually increased over the years until its peak in 2015, then it tended to decrease sharply.
 
-## 4. Conclusion:
+## 4. Conclusion
 
 To reduce carbon emissions, we need to pay attention to how we use energy, rather than paying attention to the things that emit carbon around our daily lives.
